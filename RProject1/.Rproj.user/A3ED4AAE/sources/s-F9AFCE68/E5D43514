@@ -1,0 +1,32 @@
+{
+    "id": "E5D43514",
+    "path": null,
+    "project_path": null,
+    "type": "r_dataframe",
+    "hash": "0",
+    "contents": "",
+    "dirty": false,
+    "created": 1606837588064.0,
+    "source_on_save": false,
+    "relative_order": 2,
+    "properties": {
+        "expression": "Concrete_Data",
+        "caption": "Concrete_Data",
+        "totalObservations": 1030,
+        "displayedObservations": 1030,
+        "variables": 9,
+        "cacheKey": "26629F66",
+        "object": "Concrete_Data",
+        "environment": "",
+        "contentUrl": "grid_resource/gridviewer.html?env=&obj=Concrete_Data&cache_key=26629F66&max_cols=50",
+        "preview": 0
+    },
+    "folds": "",
+    "lastKnownWriteTime": 2466321560063209061,
+    "encoding": "",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1606837588064,
+    "read_only": false,
+    "read_only_alternatives": []
+}

@@ -1,0 +1,8 @@
+model1 <- lm(Y1 ~ poly(X1, degree=3) + poly(X4, degree=3) + poly(X2, degree=3) + poly(X3, degree=3) + poly(X7, degree=3), data = ENB2012_data_1_)
+model2 <- lm(Y2 ~ poly(X1, degree=3) + poly(X4, degree=3) + poly(X2, degree=3) + poly(X3, degree=3) + poly(X7, degree=3), data = ENB2012_data_1_)
+summary(model1)
+summary(model2)
+model3 <- lm(Y1 ~ X1 + X2 + X3 + X4 + X7, data = ENB2012_data_1_)
+model4 <- lm(Y2 ~ X1 + X2 + X3 + X4 + X7, data = ENB2012_data_1_)
+summary(model3)
+summary(model4)

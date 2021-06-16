@@ -1,0 +1,30 @@
+# install.packages("C50")
+# install.packages("gmodels")
+library(C50)
+library(gmodels)
+
+data(iris)
+
+set.seed(2)
+irisRand <- iris[order(runif(150)), ]
+
+iris_train <- irisRand[1:125, ]
+iris_test  <- irisRand[126:150, ]
+
+prop.table(table(iris_train$Species))
+prop.table(table(iris_test$Species))
+
+#iris_model <- C5.0(iris_train[-5], iris_train$Species)
+model <-
+model <- C5.0(Species ~ ., data = iris_train)
+model
+plot(model)
+summary(model)
+
+iris_predict <- predict(model, iris_test)
+str(iris_predict)
+str
+library(gmodels)
+CrossTable(iris_predict, iris_test$Species, 
+           prop.chisq = FALSE, prop.c = FALSE, prop.r = FALSE,
+           dnn = c('predicted', 'actual'))

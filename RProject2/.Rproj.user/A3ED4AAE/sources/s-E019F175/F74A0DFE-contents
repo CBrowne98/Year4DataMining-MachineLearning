@@ -1,0 +1,26 @@
+library(class)
+library(gmodels)
+
+data(iris)
+
+set.seed(1)
+iris_rand <- iris[order(runif(150)), ]
+iris_z <- as.data.frame(scale(iris_rand[-5]))
+
+# four needed for kNN
+iris_train <- iris_z[1:100,]
+iris_test <- iris_z[101:150,]
+
+iris_train_species <- iris_rand[1:100, 5]
+iris_test_species <- iris_rand[101:150, 5]
+
+?knn
+predictions = knn(iris_train, iris_test, cl=iris_train_species , 
+                  k = 3)
+
+CrossTable(predictions, iris_test_species, 
+           prop.chisq = FALSE, prop.c = FALSE, prop.r = FALSE)
+
+cm <- table(predictions, iris_test_species)
+sum(diag(cm))/sum(cm)
+

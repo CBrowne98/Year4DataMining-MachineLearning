@@ -1,0 +1,35 @@
+# install.packages("C50")
+# install.packages("gmodels")
+library(C50)
+library(gmodels)
+
+data(iris)
+df <- car
+df$V7[df$V7=="unacc"] <- 1
+df$V7[df$V7=="acc"] <- 2
+df$V7[df$V7=="good"] <- 3
+df$V7[df$V7=="vgood"] <- 4
+set.seed(2)
+irisRand <- df[order(runif(150)), ]
+
+iris_train <- irisRand[1:125, ]
+iris_test  <- irisRand[126:150, ]
+
+prop.table(table(iris_train$V7))
+prop.table(table(iris_test$V7))
+
+#df$V7 <-as.factor(df$V7)
+
+#iris_model <- C5.0(iris_train[-5], iris_train$Species)
+model <- C5.0(df$V7 ~ ., data = iris_train)
+model
+plot(model)
+summary(model)
+
+iris_predict <- predict(model, iris_test)
+
+library(gmodels)
+CrossTable(iris_predict, iris_test$Species, 
+           prop.chisq = FALSE, prop.c = FALSE, prop.r = FALSE,
+           dnn = c('predicted', 'actual'))
+

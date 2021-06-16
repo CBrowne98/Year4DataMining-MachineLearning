@@ -1,0 +1,32 @@
+{
+    "id": "E1388BB2",
+    "path": null,
+    "project_path": null,
+    "type": "r_dataframe",
+    "hash": "0",
+    "contents": "",
+    "dirty": false,
+    "created": 1606837529701.0,
+    "source_on_save": false,
+    "relative_order": 1,
+    "properties": {
+        "expression": "ENB2012_data_1_",
+        "caption": "ENB2012_data_1_",
+        "totalObservations": 768,
+        "displayedObservations": 768,
+        "variables": 10,
+        "cacheKey": "A53C142F",
+        "object": "ENB2012_data_1_",
+        "environment": "",
+        "contentUrl": "grid_resource/gridviewer.html?env=&obj=ENB2012_data_1_&cache_key=A53C142F&max_cols=50",
+        "preview": 0
+    },
+    "folds": "",
+    "lastKnownWriteTime": 3687939528501458799,
+    "encoding": "",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1606837529701,
+    "read_only": false,
+    "read_only_alternatives": []
+}
